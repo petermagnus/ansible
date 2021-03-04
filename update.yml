@@ -1,11 +1,11 @@
 ---
 - name: Update
+  hosts: testsrv
   tasks:
     - name: Update dnf_cache
       dnf:
         update_cache: yes
     - name: Update all packages
       dnf:
-        name: *
+        name: sshd
         state: latest
-
