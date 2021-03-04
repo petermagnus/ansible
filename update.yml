@@ -1,0 +1,11 @@
+---
+- name: Update
+  tasks:
+    - name: Update dnf_cache
+      dnf:
+        update_cache: yes
+    - name: Update all packages
+      dnf:
+        name: *
+        state: latest
+
